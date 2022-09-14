@@ -66,7 +66,7 @@ body {
 .nav-list {
   display: block;
 }
-.header {
+.page-header {
   border-bottom: 1px solid #ececec;
 }
 
@@ -183,7 +183,7 @@ body {
   height: 600px;
   margin: 0 auto;
 }
-.hero-title {
+.hero__title {
   display: block;
   margin: 0 auto 30px;
   color: var(--text-tertiary-color);
@@ -196,6 +196,7 @@ body {
   text-transform: uppercase;
   width: 696px;
 }
+/* Button Order */
 .button-order {
   display: inline-block;
   background-color: var(--bg-button-secondary-color);
@@ -217,13 +218,13 @@ body {
   background-color: #188ce8;
 }
 /* Speciality */
-.speciality-list {
+.speciality__list {
   display: flex;
 }
-.speciality-item {
+.speciality__item {
   width: 270px;
 }
-.speciality-item:not(:last-child) {
+.speciality__item:not(:last-child) {
   margin-right: 30px;
 }
 .icon-flex {
@@ -239,29 +240,29 @@ body {
 .speciality .title {
   font-size: 14px;
 }
-.speciality-list-title {
+.speciality__label {
   font-weight: 700;
   line-height: 1.14;
   text-transform: uppercase;
   margin-bottom: 10px;
 }
 /* What we do */
-.wwd-title,
-.team-title,
+.what-we-do__title,
+.team__title,
 .clients-title {
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
 }
-.wwd-title {
+.what-we-do__title {
   margin-bottom: 50px;
 }
-.wwd-list {
+.what-we-do__list {
   display: flex;
   justify-content: space-between;
 }
-.wwd-item:not(:last-child) {
+.what-we-do__item:not(:last-child) {
   margin-right: 30px;
 }
 img {
@@ -272,7 +273,7 @@ img {
 .wrapper {
   position: relative;
 }
-.wwd-description {
+.what-we-do__description {
   font-weight: 700;
   line-height: 1.14;
   text-align: center;
@@ -280,7 +281,7 @@ img {
 
   color: #ffffff;
 }
-.wwd-description-thumb {
+.what-we-do__thumb {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -298,39 +299,39 @@ img {
   padding-bottom: 94px;
   background-color: var(--bg-secondary-color);
 }
-.team-title {
+.team__title {
   margin-bottom: 50px;
 }
-.team-list {
+.team__list {
   display: flex;
 }
-.team-member {
+.team__item {
   background-color: var(--bg-tertiary-color);
   width: 270px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
-.team-member:not(:last-child) {
+.team__item:not(:last-child) {
   margin-right: 30px;
 }
-.team-member-description {
+.team-member__description {
   padding: 30px 0;
 }
-.team-member-name {
+.team-member__name {
   margin-bottom: 10px;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
 }
-.team-member-job {
+.team-member__job {
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
   margin-bottom: 16px;
 }
-.social-link {
+.social-network__link {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -341,52 +342,52 @@ img {
   transition: background-color var(--transition-dur-and-func),
     color var(--transition-dur-and-func);
 }
-.footer .social-link {
+.footer .social-network__link {
   background-color: rgba(255, 255, 255, 0.1);
 }
-.social-link:hover {
+.social-network__link:hover {
   background-color: var(--bg-hover-color);
   border-radius: 50%;
 }
-.social-link:hover .social-link-icon {
+.social-network__link:hover .social-network__icon {
   fill: var(--text-tertiary-color);
 }
-.social-link-item .social-link:focus {
+.social-network__item .social-network__link:focus {
   background-color: var(--bg-hover-color);
 }
-.social-link:focus .social-link-icon {
+.social-network__link:focus .social-network__icon {
   fill: var(--text-tertiary-color);
 }
-.team-member .social-link-icon {
+.team__item .social-network__icon {
   fill: #afb1b8;
   transition: fill var(--transition-dur-and-func);
 }
-.social-link-item:hover .social-link-icon,
-.social-link-item:focus .social-link-icon {
+.social-network__item:hover .social-network__icon,
+.social-network__item:focus .social-network__icon {
   fill: #ffffff;
 }
-.social-link-list {
+.social-network {
   display: flex;
   gap: 10px;
   justify-content: center;
 }
 /* Clients */
-.clients-title {
+.clients__title {
   margin-bottom: 50px;
 }
-.clients-list {
+.clients__list {
   display: flex;
   align-items: center;
   gap: 30px;
 }
-.clients-item {
+.clients__item {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 170px;
   height: 92px;
 }
-.clients-link.link {
+.clients__link.link {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -398,21 +399,21 @@ img {
   transition: border-color var(--transition-dur-and-func),
     color var(--transition-dur-and-func);
 }
-.clients-icon {
+.clients__icon {
   display: flex;
   align-items: center;
   justify-content: center;
   fill: #afb1b8;
   transition: fill var(--transition-dur-and-func);
 }
-.clients-link:hover,
-.clients-link:focus {
+.clients__link:hover,
+.clients__link:focus {
   border-color: #2196f3;
 }
-.clients-link:hover .clients-icon {
+.clients__link:hover .clients__icon {
   fill: var(--bg-hover-color);
 }
-.clients-link:focus .clients-icon {
+.clients__link:focus .clients__icon {
   fill: var(--bg-hover-color);
 }
 /* Main Portfolio */
@@ -422,7 +423,7 @@ img {
   justify-content: center;
   margin-bottom: 50px;
 }
-.filter {
+.filters__btn {
   background-color: var(--bg-button-primary-color);
   color: var(--text-secondary-color);
   font-weight: 500;
@@ -437,16 +438,16 @@ img {
     background-color var(--transition-dur-and-func),
     box-shadow var(--transition-dur-and-func);
 }
-.filter:hover,
-.filter:focus {
+.filters__btn:hover,
+.filters__btn:focus {
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
-.filter-item:not(:last-child) {
+.filters__item:not(:last-child) {
   margin-right: 8px;
 }
-.filter:hover,
-.filter:focus {
+.filters__btn:hover,
+.filters__btn:focus {
   background-color: var(--bg-hover-color);
   color: var(--text-tertiary-color);
 }
@@ -557,7 +558,7 @@ img {
   color: var(--text-tertiary-color);
   margin-bottom: 20px;
 }
-.social-link-icon {
+.social-network__icon {
   fill: var(--text-tertiary-color);
 }
 .link:hover {

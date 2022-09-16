@@ -1,0 +1,27 @@
+.header {
+  border-bottom: 1px solid #ececec;
+}
+.header__container {
+    display: flex;
+    align-items: center;
+}
+.nav {
+  display: flex;
+  align-items: center;
+}
+.nav__link {
+    display: inline-block;
+  max-height: 80px;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  color: var(--text-secondary-color);
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+}
+.nav__list {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
